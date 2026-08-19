@@ -17,7 +17,7 @@ export default function Header() {
 
         <nav style={styles.nav}>
           {links.map((link) => (
-            <a key={link} href="#" style={styles.navLink}>
+            <a key={link} href="#" className="nav-link">
               {link.toUpperCase()}
             </a>
           ))}
@@ -49,9 +49,10 @@ const styles: Record<string, React.CSSProperties> = {
   },
   logo: {
     fontWeight: 800,
-    fontSize: 20,
+    fontSize: 22,
     letterSpacing: "0.04em",
     whiteSpace: "nowrap",
+    fontFamily: "var(--heading-font)",
   },
   logoSub: {
     fontSize: 10,

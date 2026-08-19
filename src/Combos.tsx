@@ -4,12 +4,14 @@ const combos = [
     text: "Escolha 2 e garanta cabelo e barba sempre alinhados.",
     price: 129.9,
     cta: "Escolher Combo",
+    image: "https://picsum.photos/id/1020/800/600",
   },
   {
     title: "Combo 3 Produtos",
     text: "O trio essencial para hidratação, proteção e estilo todos os dias.",
     price: 189.9,
     cta: "Escolher Combo",
+    image: "https://picsum.photos/id/1024/800/600",
   },
   {
     title: "Combo Linha Completa",
@@ -17,6 +19,7 @@ const combos = [
     price: 299.9,
     cta: "Quero a Linha Completa",
     highlight: true,
+    image: "https://picsum.photos/id/1035/800/600",
   },
 ];
 
@@ -29,30 +32,39 @@ const formatPrice = (value: number) =>
 export default function Combos() {
   return (
     <section
-      style={{ padding: "80px 0", borderTop: "1px solid var(--border)" }}
+      className="section-tight"
+      style={{ borderTop: "1px solid var(--border)" }}
     >
       <div className="container">
-        <h2 style={styles.heading}>Combos para cuidar melhor e pagar menos</h2>
+        <h2 className="heading-h2">COMBOS PARA CUIDAR MELHOR E PAGAR MENOS</h2>
 
         <div style={styles.grid}>
           {combos.map((c) => (
             <div
               key={c.title}
-              style={{
-                ...styles.card,
-                ...(c.highlight ? styles.cardHighlight : {}),
-              }}
+              className={`card-base ${c.highlight ? "card-base--accent" : ""}`}
+              style={{ padding: 20 }}
             >
               <span style={styles.label}>{c.title.toUpperCase()}</span>
-              <div style={styles.imagePlaceholder} />
+              <img
+                src={c.image}
+                alt={c.title}
+                style={{
+                  width: "100%",
+                  height: 140,
+                  objectFit: "cover",
+                  borderRadius: 10,
+                  margin: "16px 0",
+                }}
+              />
               <p style={styles.text}>{c.text}</p>
               <div style={styles.priceLabel}>A partir de</div>
               <div style={styles.price}>R$ {formatPrice(c.price)}</div>
               <button
-                className="btn btn-gold"
+                className="btn btn-gold btn-small"
                 style={{ width: "100%", marginTop: 16 }}
               >
-                {c.cta}
+                {c.cta.toUpperCase()}
               </button>
             </div>
           ))}

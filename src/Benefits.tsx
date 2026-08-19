@@ -31,21 +31,26 @@ const items = [
 export default function Benefits() {
   return (
     <section
-      style={{ padding: "80px 0", borderTop: "1px solid var(--border)" }}
+      className="section-tight"
+      style={{ borderTop: "1px solid var(--border)" }}
     >
       <div className="container">
-        <h2 style={styles.heading}>
-          <span style={{ color: "var(--gold)" }}>Benefícios</span> que você
-          sente, resultados que você vê
+        <h2 className="heading-h2">
+          <span style={{ color: "var(--gold)" }}>BENEFÍCIOS</span> QUE VOCÊ
+          SENTE, RESULTADOS QUE VOCÊ VÊ
         </h2>
 
         <div style={styles.grid}>
           {items.map(({ icon: Icon, title, text }) => (
-            <div key={title} style={styles.card}>
+            <div
+              key={title}
+              className="card-base"
+              style={{ textAlign: "center", paddingTop: 28 }}
+            >
               <div style={styles.iconWrap}>
                 <Icon size={22} color="var(--gold)" />
               </div>
-              <h3 style={styles.cardTitle}>{title}</h3>
+              <h3 style={styles.cardTitle}>{title.toUpperCase()}</h3>
               <p style={styles.cardText}>{text}</p>
             </div>
           ))}

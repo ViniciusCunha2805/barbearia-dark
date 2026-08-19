@@ -26,7 +26,7 @@ export default function Footer() {
     <footer
       style={{ borderTop: "1px solid var(--border)", padding: "56px 0 24px" }}
     >
-      <div className="container" style={styles.grid}>
+      <div className="container footer-grid">
         <div>
           <div style={styles.logo}>DARK</div>
           <p style={styles.tagline}>
@@ -62,9 +62,65 @@ export default function Footer() {
         <div>
           <h4 style={styles.colTitle}>Siga a Dark</h4>
           <div style={{ display: "flex", gap: 12, marginTop: 12 }}>
-            {/* <Instagram size={18} color="var(--text-muted)" /> */}
-            <Music2 size={18} color="var(--text-muted)" />
-            {/* <Facebook size={18} color="var(--text-muted)" /> */}
+            <a
+              href="#"
+              aria-label="Instagram"
+              style={{ color: "var(--text-muted)" }}
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect
+                  x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="3"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a
+              href="#"
+              aria-label="TikTok"
+              style={{ color: "var(--text-muted)" }}
+            >
+              <Music2 size={18} color="var(--text-muted)" />
+            </a>
+            <a
+              href="#"
+              aria-label="Facebook"
+              style={{ color: "var(--text-muted)" }}
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M18 2h-3a4 4 0 0 0-4 4v3H8v3h3v7h3v-7h2.5l.5-3H14V6a1 1 0 0 1 1-1h3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>

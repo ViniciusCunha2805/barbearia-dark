@@ -4,10 +4,21 @@ export default function CTABanner() {
   return (
     <section style={{ padding: "48px 0" }}>
       <div className="container" style={styles.banner}>
-        <div style={styles.photoPlaceholder} />
+        <img
+          src="https://picsum.photos/seed/man1/320/320"
+          alt="Homem"
+          style={{
+            width: 120,
+            height: 120,
+            objectFit: "cover",
+            borderRadius: 12,
+            flexShrink: 0,
+            boxShadow: "0 18px 50px rgba(0,0,0,0.6)",
+          }}
+        />
 
         <div style={styles.content}>
-          <h2 style={styles.title}>Pronto para elevar seu visual?</h2>
+          <h2 style={styles.title}>PRONTO PARA ELEVAR SEU VISUAL?</h2>
           <p style={styles.text}>
             Escolha seus produtos favoritos e receba com rapidez e segurança.
             Dúvidas? Fale com a gente no WhatsApp.

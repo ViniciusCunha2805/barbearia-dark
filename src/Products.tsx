@@ -3,31 +3,37 @@ const products = [
     name: "Shampoo Profissional",
     text: "Limpeza profunda e sensação de frescor.",
     price: 69.9,
+    image: "https://picsum.photos/id/1011/800/600",
   },
   {
     name: "Bálsamo Profissional",
     text: "Hidratação e controle para todos os tipos de cabelo.",
     price: 69.9,
+    image: "https://picsum.photos/id/1012/800/600",
   },
   {
     name: "Leave In Profissional",
     text: "Protege, hidrata e realça a beleza dos fios.",
     price: 74.9,
+    image: "https://picsum.photos/id/1013/800/600",
   },
   {
     name: "Shave Cream Profissional",
     text: "Deslize superior e proteção para um barbear impecável.",
     price: 64.9,
+    image: "https://picsum.photos/id/1015/800/600",
   },
   {
     name: "Balm Fortalecedor",
     text: "Fortalece os fios e reduz quebra e frizz.",
     price: 69.9,
+    image: "https://picsum.photos/id/1016/800/600",
   },
   {
     name: "Pomada Modeladora",
     text: "Fixação forte com acabamento natural e duradouro.",
     price: 64.9,
+    image: "https://picsum.photos/id/1018/800/600",
   },
 ];
 
@@ -44,21 +50,25 @@ export default function Products() {
       style={{ padding: "80px 0", borderTop: "1px solid var(--border)" }}
     >
       <div className="container">
-        <h2 style={styles.heading}>Produtos Individuais</h2>
+        <h2 className="heading-h2">PRODUTOS INDIVIDUAIS</h2>
 
         <div style={styles.grid}>
           {products.map((p) => (
-            <div key={p.name} style={styles.card}>
-              <div style={styles.imagePlaceholder} />
-              <div style={{ padding: "16px 18px 20px" }}>
-                <h3 style={styles.name}>{p.name}</h3>
+            <div
+              key={p.name}
+              className="card-base"
+              style={{ overflow: "hidden" }}
+            >
+              <img className="product-image" src={p.image} alt={p.name} />
+              <div className="card-body">
+                <h3 className="product-name">{p.name.toUpperCase()}</h3>
                 <p style={styles.text}>{p.text}</p>
-                <div style={styles.price}>R$ {formatPrice(p.price)}</div>
+                <div className="product-price">R$ {formatPrice(p.price)}</div>
                 <button
-                  className="btn btn-gold"
+                  className="btn btn-gold btn-small"
                   style={{ width: "100%", marginTop: 12 }}
                 >
-                  Comprar
+                  COMPRAR
                 </button>
               </div>
             </div>
